@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./css/index.css" rel="stylesheet">
+    <title>Sistema Academico ADSO 1</title>
+</head>
+
+<body>
+
+    <header id="header">
+        <div class="center">
+
+            <div id="logo">
+                <div>
+                    <img src="./img/logo.svg" class="app-logo" alt="logotipo">
+                </div>
+                <div>
+                    <span id="brand">
+                        <strong>Sistema Academico</strong> ADSO 1
+                    </span>
+
+                </div>
+
+            </div>
+            <nav id="menu">
+                <ul>
+                    <li>
+                        <a href="#">Blog</a>
+                    </li>
+                    <li>
+                        <a href="registro_estudiantes.html">Registro Estudiante</a>
+                    </li>
+                    <li>
+                        <a href="#">Listado Estudiantes</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="clearfix">
+
+            </div>
+
+        </div>
+    </header>
+
+    <div id="slider" class="slider-big">
+        <h1>Analisis y Desarrollo de Software ADSO 1</h1>
+        <h2>Coordinación de Malambo</h2>
+        <a href="#" class="btn-white">Ir al Blog</a>
+    </div>
+
+    <div class="center">
+        <section id="content">
+            <h2 class="subheader">Integrantes ADSO 1</h2>
+
+            <script type="text/javascript">
+                window.addEventListener("load", function() {
+                    var template = document.getElementById("article-template");
+                    var articles = document.getElementById("articles");
+
+                    for (var i = 1; i <= 5; i++) {
+                        var clonado = template.cloneNode(true);
+                        clonado.removeAttribute("id");
+                        var h2 = clonado.getElementsByTagName("h2")[0];
+                        h2.innerHTML = h2.textContent + ' ' + i;
+                        articles.appendChild(clonado);
+                    }
+                });
+            </script>
+
+            <!-- Listado integrantes curso -->
+            <div id="articles">
+                <article class="article-item" id="article-template">
+                    <div class="image-wrap">
+                        <img src="./img/persona.png" alt="persona">
+                    </div>
+
+                    <h2>Estudiante</h2>
+                    <span class="date">
+                        Hace 5 munitos
+                    </span>
+                    <a href="#">Leer mas</a>
+                    <!-- LIMPIAR FLOTADOS -->
+                    <div class="clearfix">
+
+                    </div>
+                </article>
+            </div>
+
+            <!-- AÑADIR ARTICULOS VIA JS -->
+
+        </section>
+
+        <aside id="sidebar">
+            <div id="nav-blog" class="sidebar-item">
+                <h3>
+                    Puedes hacer esto
+                </h3>
+                <a href="#" class="btn btn-success">Crear estudiante</a>
+            </div>
+            <div id="search" class="sidebar-item">
+                <h3>Buscador</h3>
+                <p>Encuentra el estudiante que buscas</p>
+                <fieldset>
+                    <form action="">
+                        <input type="text" name="search">
+                        <input type="submit" name="submit" value="Buscar" class="btn">
+                    </form>
+                </fieldset>
+            </div>
+        </aside>
+
+        <!-- LIMPIAR FLOTADOS -->
+        <div class="clearfix">
+
+        </div>
+
+    </div>
+
+    <footer id="footer">
+        <div class="center">
+            <p>
+                &copy; Instructor Ivan Castro Ruiz
+            </p>
+        </div>
+    </footer>
+
+    <script src="./JS/index.js" type="module"></script>
+</body>
+
+</html>
